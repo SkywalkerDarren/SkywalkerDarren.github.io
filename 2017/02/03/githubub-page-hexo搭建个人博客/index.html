@@ -6,17 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://SkywalkerDarren.com">
-  <title>SkywalkerDarren</title>
+  <title>githubpage+hexo搭建个人主页 | SkywalkerDarren</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="DEAD BEEF">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SkywalkerDarren">
-<meta property="og:url" content="http://SkywalkerDarren.com/index.html">
+  <meta name="description" content="开头一些的唠叨之前一直想着建立一个属于自己的个人技术博客，由于接触的不多，也不知道什么hexo这些快速建博客的工具，只能选择放弃。  
+机缘巧合之下看到了一篇有关hexo建blog的文章，恰巧假期闲来无事也就捣鼓了这个博客，过程也不是很复杂，只要有些许的编程水平就可以搭建了。趁着刚刚建起博客时兴奋的余热，顺手写起了这篇教程，也给有建站兴趣的小伙伴们来一个参考吧。本文也尽量用简单的方式来演示建站的详">
+<meta property="og:type" content="article">
+<meta property="og:title" content="githubpage+hexo搭建个人主页">
+<meta property="og:url" content="http://SkywalkerDarren.com/2017/02/03/githubub-page-hexo搭建个人博客/index.html">
 <meta property="og:site_name" content="SkywalkerDarren">
-<meta property="og:description" content="DEAD BEEF">
+<meta property="og:description" content="开头一些的唠叨之前一直想着建立一个属于自己的个人技术博客，由于接触的不多，也不知道什么hexo这些快速建博客的工具，只能选择放弃。  
+机缘巧合之下看到了一篇有关hexo建blog的文章，恰巧假期闲来无事也就捣鼓了这个博客，过程也不是很复杂，只要有些许的编程水平就可以搭建了。趁着刚刚建起博客时兴奋的余热，顺手写起了这篇教程，也给有建站兴趣的小伙伴们来一个参考吧。本文也尽量用简单的方式来演示建站的详">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203174815.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203175238.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203182507.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203183222.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203184801.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203185340.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203185535.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203200404.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203200431.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203200256.jpg">
+<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203205303.jpg">
+<meta property="og:updated_time" content="2017-02-03T13:09:11.153Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SkywalkerDarren">
-<meta name="twitter:description" content="DEAD BEEF">
+<meta name="twitter:title" content="githubpage+hexo搭建个人主页">
+<meta name="twitter:description" content="开头一些的唠叨之前一直想着建立一个属于自己的个人技术博客，由于接触的不多，也不知道什么hexo这些快速建博客的工具，只能选择放弃。  
+机缘巧合之下看到了一篇有关hexo建blog的文章，恰巧假期闲来无事也就捣鼓了这个博客，过程也不是很复杂，只要有些许的编程水平就可以搭建了。趁着刚刚建起博客时兴奋的余热，顺手写起了这篇教程，也给有建站兴趣的小伙伴们来一个参考吧。本文也尽量用简单的方式来演示建站的详">
+<meta name="twitter:image" content="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203174815.jpg">
   
   
     <link rel="icon" href="/favicon.png">
@@ -151,16 +167,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-githubub-page-hexo搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-githubub-page-hexo搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/03/githubub-page-hexo搭建个人博客/">githubpage+hexo搭建个人主页</a>
+    <h1 class="article-title" itemprop="name">
+      githubpage+hexo搭建个人主页
     </h1>
   
 
@@ -183,9 +197,46 @@ var _hmt = _hmt || [];
 <li>了解Git</li>
 <li>有一定编程基础  </li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/02/03/githubub-page-hexo搭建个人博客/#more">more >></a>
-        
+<a id="more"></a>
+<h1 id="建站需要的准备"><a href="#建站需要的准备" class="headerlink" title="建站需要的准备"></a>建站需要的准备</h1><ul>
+<li>注册Github及安装Git</li>
+<li>安装Node.js</li>
+<li>安装hexo  </li>
+</ul>
+<h1 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h1><p>首先再点<a href="https://github.com/" target="_blank" rel="external">这里</a>注册Github账号，注册流程很简单网上教程也很多这里就不多讲了。  </p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203174815.jpg" alt="建站"><br>登录账号后，点击这里建立你的仓库。  </p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203175238.jpg" alt="仓库"><br>这里仓库的名字要与你的github名字一致，<code>你的名字.github.io</code><br>然后点Create repository即可。  </p>
+<h2 id="下载Git"><a href="#下载Git" class="headerlink" title="下载Git"></a>下载Git</h2><p>点<a href="https://git-scm.com/downloads" target="_blank" rel="external">这里</a>下载并安装Git Bash。  </p>
+<h2 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h2><p>打开刚刚安装的Git Bash，键入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;注册github时的邮箱&quot;</div></pre></td></tr></table></figure></p>
+<p>然后一路回车就可以了。待密钥生成完毕会在你的用户目录下的<code>.ssh</code>里面多出<strong>id_rsa</strong>，<strong>id_rsa.pub</strong>两个文件<br>其中我的目录是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Users\Darren（你自己的电脑用户名）\.ssh\</div></pre></td></tr></table></figure></p>
+<p>用记事本打开<strong>id_rsa.pub</strong>，全选然后复制到<a href="https://github.com/settings/ssh" target="_blank" rel="external">这里</a><br><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203182507.jpg" alt="ssh"><br>在这里点<code>New SSH key</code>，Title里面的随便填，把<strong>id_rsa.pub</strong>里面的东西全部复制到key里面，然后点<code>Add SSH key</code>即可。  </p>
+<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>点<a href="https://nodejs.org/en/" target="_blank" rel="external">这里</a>下载并安装Node.js，他有通用版和最新版，一般选通用版就可以了。<br><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203183222.jpg" alt="Node">  </p>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>有能力的小伙伴可以通过<a href="https://hexo.io/" target="_blank" rel="external">官网</a>和<a href="https://hexo.io/docs/" target="_blank" rel="external">Hexo官方文档</a>来查阅安装。<br>接下来的操作都在git bash里面进行。在里面粘贴<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>安装完后键入<code>hexo</code>出现下面这样就是成功了。<br><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203184801.jpg" alt="hexo">  </p>
+<h2 id="创建博客文件夹"><a href="#创建博客文件夹" class="headerlink" title="创建博客文件夹"></a>创建博客文件夹</h2><p>找到一个你想存放博客的地方，右键选Git Bash打开输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init 你博客的名字</div></pre></td></tr></table></figure></p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203185340.jpg" alt="init">  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd 你博客的名字</div></pre></td></tr></table></figure>
+<h2 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203185535.jpg" alt="install">  </p>
+<h2 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h2><p>生成静态页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure></p>
+<p>先安装server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo -server --save</div></pre></td></tr></table></figure></p>
+<p>启动本地预览<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<p>此时在地址栏中输入<code>http://localhost:4000/.</code>就能看到你自己的博客了，但此时还是本地的。  </p>
+<h1 id="Github创建博客"><a href="#Github创建博客" class="headerlink" title="Github创建博客"></a>Github创建博客</h1><p>先在github里面打开你刚建的那个仓库，点击setting。<br><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203200404.jpg" alt="set">  </p>
+<p>在下面github page里面点choose a theme<br><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203200431.jpg" alt="theme">  </p>
+<p>记事本或sublime打开博客目录下的<code>_config.yml</code>编辑。<br>只用改下列部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: 博客标题</div><div class="line">subtitle: 副标题</div><div class="line">description: 描述</div><div class="line">author: 作者</div><div class="line">language: zh-CN</div><div class="line">timezone: Asia/Hong_Kong</div></pre></td></tr></table></figure></p>
+<p>还有<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url: http://你的用户名.com</div></pre></td></tr></table></figure></p>
+<p>在最后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repo: 仓库地址</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>仓库地址可以在这里找到，复制粘贴过去。<br><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203200256.jpg" alt="地址">  </p>
+<h1 id="Hexo部署"><a href="#Hexo部署" class="headerlink" title="Hexo部署"></a>Hexo部署</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>这样就部署完成了，网页里打开<code>你的用户名.github.io</code>就是你的个人主页了。  </p>
+<h1 id="常用Hexo命令"><a href="#常用Hexo命令" class="headerlink" title="常用Hexo命令"></a>常用Hexo命令</h1><p>常用命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo help #查看帮助</div><div class="line">hexo init #初始化一个目录</div><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成网页，可以在 public 目录查看整个网站的文件</div><div class="line">hexo server #本地预览，&apos;Ctrl+C&apos;关闭</div><div class="line">hexo deploy #部署.deploy目录</div><div class="line">hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**</div></pre></td></tr></table></figure></p>
+<p>简写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure></p>
+<h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new 标题</div></pre></td></tr></table></figure>
+<p>这时候在你的博客目录下的<code>source</code>里面的<code>_post</code>文件夹内就会有你的<code>标题.md</code>博客了。<br><img src="http://okqqc0v2n.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170203205303.jpg" alt="位置">  </p>
+<p>打开用markdown的语法进行编辑即可。编辑完成后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo g			//生成静态页面</div><div class="line">hexo s			//本地预览</div><div class="line">hexo d			//上传部署</div></pre></td></tr></table></figure></p>
+<p>至此，你的博客就算是建立完成了。赶紧开始着手折腾属于你自己的小窝吧。</p>
+
       
 
       
@@ -219,10 +270,6 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/03/githubub-page-hexo搭建个人博客/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -230,7 +277,16 @@ var _hmt = _hmt || [];
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/02/Markdown学习手册/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Markdown学习手册</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -238,135 +294,28 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Markdown学习手册" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/Markdown学习手册/">Markdown学习手册</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/02/Markdown学习手册/" class="archive-article-date">
-  	<time datetime="2017-02-02T11:46:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Markdown学习手册"><a href="#Markdown学习手册" class="headerlink" title="Markdown学习手册"></a>Markdown学习手册</h1><h2 id="一、-认识Markdown"><a href="#一、-认识Markdown" class="headerlink" title="一、 认识Markdown"></a>一、 认识Markdown</h2><p>Markdown 是一种用来写作的轻量级<strong>「标记语言」</strong>，它用简洁的语法代替排版，而不像一般我们用的字处理软件 Word 或 Pages 有大量的排版、字体设置。它使我们专心于码字，用「标记」语法，来代替常见的排版格式。例如此文从内容到格式，甚至插图，键盘就可以通通搞定了。目前来看，支持 Markdown 语法的编辑器有很多，包括很多网站（例如<a href="http://www.jianshu.com/">简书</a>）也支持了 Markdown 的文字录入。Markdown 从写作到完成，导出格式随心所欲，你可以导出 HTML 格式的文件用来网站发布，也可以十分方便的导出 PDF 格式，这种格式写出的简历更能得到 HR 的好感。甚至可以利用 CloudApp 这种云服务工具直接上传至网页用来分享你的文章，全球最大的轻博客平台 Tumblr，也支持 Mou 这类 Markdown 工具的直接上传。  </p>
-<h3 id="Markdown官方文档"><a href="#Markdown官方文档" class="headerlink" title="Markdown官方文档"></a>Markdown官方文档</h3><blockquote>
-<p>这里列出了Markdown的语法规则文档，在下文我也会<strong>用自己的方式来展示这些语法</strong>  </p>
-<ul>
-<li><p><a href="http://daringfireball.net/projects/markdown/syntax">“创始人 John Gruber 的 Markdown 语法说明”</a>  </p>
-</li>
-<li><p><a href="http://wowubuntu.com/markdown/">中文版的Markdown语法手册</a>  </p>
-</li>
-</ul>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/02/02/Markdown学习手册/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/02/Markdown学习手册/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="githubub-page-hexo搭建个人博客" data-title="githubpage+hexo搭建个人主页" data-url="http://SkywalkerDarren.com/2017/02/03/githubub-page-hexo搭建个人博客/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"skywalkerdarren"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="hello-hello-world" class="article article-type-hello  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/hello-world/">Hello world</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/02/hello-world/" class="archive-article-date">
-  	<time datetime="2017-02-02T04:15:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我的第一篇博客</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/02/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -388,8 +337,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
