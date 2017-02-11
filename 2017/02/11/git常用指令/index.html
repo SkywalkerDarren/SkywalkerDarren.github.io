@@ -9,24 +9,21 @@
   <title>git常用指令 | SkywalkerDarren</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  
-这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。  
-以上这两张图就是git版本控制的大概框架了，根据这两张图就能加深">
+这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用指令">
 <meta property="og:url" content="http://SkywalkerDarren.com/2017/02/11/git常用指令/index.html">
 <meta property="og:site_name" content="SkywalkerDarren">
 <meta property="og:description" content="git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  
-这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。  
-以上这两张图就是git版本控制的大概框架了，根据这两张图就能加深">
-<meta property="og:image" content="http://p1.bpimg.com/567571/4ad6026308d580ad.png">
+这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。">
 <meta property="og:image" content="http://p1.bpimg.com/567571/c49a713c776e6967.png">
-<meta property="og:updated_time" content="2017-02-11T06:31:12.109Z">
+<meta property="og:image" content="http://p1.bpimg.com/567571/4ad6026308d580ad.png">
+<meta property="og:updated_time" content="2017-02-11T06:35:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用指令">
 <meta name="twitter:description" content="git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  
-这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。  
-以上这两张图就是git版本控制的大概框架了，根据这两张图就能加深">
-<meta name="twitter:image" content="http://p1.bpimg.com/567571/4ad6026308d580ad.png">
+这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。">
+<meta name="twitter:image" content="http://p1.bpimg.com/567571/c49a713c776e6967.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -182,8 +179,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  </p>
-<p>这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。  </p>
-<p><img src="http://p1.bpimg.com/567571/4ad6026308d580ad.png" alt=""><br><img src="http://p1.bpimg.com/567571/c49a713c776e6967.png" alt=""><br>以上这两张图就是git版本控制的大概框架了，根据这两张图就能加深理解git的工作流程和一些命令了</p>
+<p>这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。<br><img src="http://p1.bpimg.com/567571/c49a713c776e6967.png" alt=""><br><a id="more"></a><br><img src="http://p1.bpimg.com/567571/4ad6026308d580ad.png" alt=""><br>以上这两张图就是git版本控制的大概框架了，根据这两张图就能加深理解git的工作流程和一些命令了</p>
 <h1 id="配置账户信息"><a href="#配置账户信息" class="headerlink" title="配置账户信息"></a>配置账户信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">git config <span class="_">-e</span> [--global] <span class="comment"># 编辑Git配置文件</span></div><div class="line"></div><div class="line">git config --global user.name yanhaijing</div><div class="line">git config --global user.email yanhaijing@yeah.net</div><div class="line"></div><div class="line">git config --list <span class="comment">#查看配置的信息</span></div><div class="line"></div><div class="line">git <span class="built_in">help</span> config <span class="comment">#获取帮助信息</span></div></pre></td></tr></table></figure>
 <h1 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C yanhaijing@yeah.net <span class="comment">#生成密钥</span></div><div class="line"></div><div class="line">ssh -T git@github.com <span class="comment">#测试是否成功</span></div></pre></td></tr></table></figure>
 <h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><p>对当前所在目录进行的操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git init <span class="comment">#初始化</span></div><div class="line">git status <span class="comment">#获取状态</span></div><div class="line">git add [file1] [file2] ... <span class="comment">#.或*代表全部添加 git add .</span></div><div class="line">git commit -m <span class="string">"message"</span> <span class="comment">#此处注意乱码</span></div><div class="line">git remote add origin git@github.com:xxxxxxxx/xxx.git <span class="comment">#添加源</span></div><div class="line">git push -u origin master <span class="comment">#push同时设置默认跟踪分支</span></div></pre></td></tr></table></figure></p>
@@ -345,6 +341,14 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
@@ -358,14 +362,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
               <li class="article-tag-list-item">
