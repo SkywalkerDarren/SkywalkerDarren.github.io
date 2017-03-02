@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://SkywalkerDarren.com/2017/02/11/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</loc>
-    <lastmod>2017-02-11T06:35:47.000Z</lastmod>
+    <loc>http://SkywalkerDarren.com/2017/02/27/raspberrypi%E8%A3%85%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2017-03-02T14:52:41.727Z</lastmod>
     <data>
         <display>
-        <title>git常用指令</title>
-        <pubTime>2017-02-11T04:58:18.000Z</pubTime>
+        <title>raspberry pi 装系统</title>
+        <pubTime>2017-02-27T12:44:58.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>树莓派</tag>
          
          
            
@@ -22,7 +22,7 @@
     
   <url>
     <loc>http://SkywalkerDarren.com/2017/02/04/%E4%B8%83%E7%89%9B%E4%BA%91-%E6%9E%81%E7%AE%80%E5%9B%BE%E5%BA%8A%E4%BD%9C%E4%B8%BAMarkdown%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2017-02-05T08:08:52.000Z</lastmod>
+    <lastmod>2017-02-11T06:52:13.804Z</lastmod>
     <data>
         <display>
         <title>七牛云+极简图床作为Markdown图床</title>
@@ -35,6 +35,23 @@
         <tag>极简</tag>
          
         <tag>图床</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://SkywalkerDarren.com/2017/02/11/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</loc>
+    <lastmod>2017-02-11T06:35:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>git常用指令</title>
+        <pubTime>2017-02-11T04:58:18.000Z</pubTime>
+        
+        <tag>git</tag>
          
          
            

@@ -6,24 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://SkywalkerDarren.com">
-  <title>git常用指令 | SkywalkerDarren</title>
+  <title>raspberry pi 装系统 | SkywalkerDarren</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  
-这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。">
+  <meta name="description" content="Raspberry Pi 简介Raspberry Pi原本是一款针对计算机编程教育的迷你计算机，仅有银行卡大小，但有丰富的外部接口，如HDMI，DSI，CSI，USB，GPIO，TF卡接口以及3.5mm音频接口。因此很多计算机爱好者开始用PI做各种各样的开发，从装了Kali的渗透利器到无所不能的家庭影院，都可以用树莓派来完成。可谓“麻雀虽小五脏俱全”。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用指令">
-<meta property="og:url" content="http://SkywalkerDarren.com/2017/02/11/git常用指令/index.html">
+<meta property="og:title" content="raspberry pi 装系统">
+<meta property="og:url" content="http://SkywalkerDarren.com/2017/02/27/raspberrypi装系统/index.html">
 <meta property="og:site_name" content="SkywalkerDarren">
-<meta property="og:description" content="git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  
-这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。">
-<meta property="og:image" content="http://p1.bpimg.com/567571/c49a713c776e6967.png">
-<meta property="og:image" content="http://p1.bpimg.com/567571/4ad6026308d580ad.png">
-<meta property="og:updated_time" content="2017-02-11T06:35:47.000Z">
+<meta property="og:description" content="Raspberry Pi 简介Raspberry Pi原本是一款针对计算机编程教育的迷你计算机，仅有银行卡大小，但有丰富的外部接口，如HDMI，DSI，CSI，USB，GPIO，TF卡接口以及3.5mm音频接口。因此很多计算机爱好者开始用PI做各种各样的开发，从装了Kali的渗透利器到无所不能的家庭影院，都可以用树莓派来完成。可谓“麻雀虽小五脏俱全”。">
+<meta property="og:image" content="http://p1.bqimg.com/567571/4abf113a486e4b4e.png">
+<meta property="og:image" content="http://p1.bqimg.com/567571/62b097ef9280f083.jpg">
+<meta property="og:image" content="http://p1.bpimg.com/567571/b9f43cbc36627133.jpg">
+<meta property="og:image" content="http://p1.bpimg.com/567571/3024e084b254a2ae.jpg">
+<meta property="og:image" content="http://i1.piimg.com/567571/899c631baa064bf3.jpg">
+<meta property="og:image" content="http://p1.bpimg.com/567571/f7578549f271c84f.jpg">
+<meta property="og:image" content="http://p1.bqimg.com/567571/d1929f4ee2adde84.jpg">
+<meta property="og:updated_time" content="2017-03-02T14:52:41.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用指令">
-<meta name="twitter:description" content="git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  
-这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。">
-<meta name="twitter:image" content="http://p1.bpimg.com/567571/c49a713c776e6967.png">
+<meta name="twitter:title" content="raspberry pi 装系统">
+<meta name="twitter:description" content="Raspberry Pi 简介Raspberry Pi原本是一款针对计算机编程教育的迷你计算机，仅有银行卡大小，但有丰富的外部接口，如HDMI，DSI，CSI，USB，GPIO，TF卡接口以及3.5mm音频接口。因此很多计算机爱好者开始用PI做各种各样的开发，从装了Kali的渗透利器到无所不能的家庭影院，都可以用树莓派来完成。可谓“麻雀虽小五脏俱全”。">
+<meta name="twitter:image" content="http://p1.bqimg.com/567571/4abf113a486e4b4e.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -158,38 +160,42 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git常用指令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-raspberrypi装系统" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git常用指令
+      raspberry pi 装系统
     </h1>
   
 
         
-        <a href="/2017/02/11/git常用指令/" class="archive-article-date">
-  	<time datetime="2017-02-11T04:58:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-11</time>
+        <a href="/2017/02/27/raspberrypi装系统/" class="archive-article-date">
+  	<time datetime="2017-02-27T12:44:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>git我用的时间不长，几年前注册的git，但是总是因为命令记不清楚，所以很少用git对我自己的代码进行托管。但git总归还是得要学的嘛，现在渐渐的我也开始习惯用git来管理自己的代码，不仅很方便而且相当于对自己的代码有个安全的备份，还能跟别人共享代码。  </p>
-<p>这篇文章我就记录一些我自己常用git命令和一些难记住但又很有用的命令吧。<br><img src="http://p1.bpimg.com/567571/c49a713c776e6967.png" alt=""><br><a id="more"></a><br><img src="http://p1.bpimg.com/567571/4ad6026308d580ad.png" alt=""><br>以上这两张图就是git版本控制的大概框架了，根据这两张图就能加深理解git的工作流程和一些命令了</p>
-<h1 id="配置账户信息"><a href="#配置账户信息" class="headerlink" title="配置账户信息"></a>配置账户信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">git config <span class="_">-e</span> [--global] <span class="comment"># 编辑Git配置文件</span></div><div class="line"></div><div class="line">git config --global user.name yanhaijing</div><div class="line">git config --global user.email yanhaijing@yeah.net</div><div class="line"></div><div class="line">git config --list <span class="comment">#查看配置的信息</span></div><div class="line"></div><div class="line">git <span class="built_in">help</span> config <span class="comment">#获取帮助信息</span></div></pre></td></tr></table></figure>
-<h1 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C yanhaijing@yeah.net <span class="comment">#生成密钥</span></div><div class="line"></div><div class="line">ssh -T git@github.com <span class="comment">#测试是否成功</span></div></pre></td></tr></table></figure>
-<h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><p>对当前所在目录进行的操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git init <span class="comment">#初始化</span></div><div class="line">git status <span class="comment">#获取状态</span></div><div class="line">git add [file1] [file2] ... <span class="comment">#.或*代表全部添加 git add .</span></div><div class="line">git commit -m <span class="string">"message"</span> <span class="comment">#此处注意乱码</span></div><div class="line">git remote add origin git@github.com:xxxxxxxx/xxx.git <span class="comment">#添加源</span></div><div class="line">git push -u origin master <span class="comment">#push同时设置默认跟踪分支</span></div></pre></td></tr></table></figure></p>
-<h1 id="从仓库克隆到本地"><a href="#从仓库克隆到本地" class="headerlink" title="从仓库克隆到本地"></a>从仓库克隆到本地</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git://github.com/xxxxxxxxx/xxx.git <span class="comment">#克隆至当前所在目录</span></div></pre></td></tr></table></figure>
-<h1 id="本地命令"><a href="#本地命令" class="headerlink" title="本地命令"></a>本地命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">git add . <span class="comment"># 跟踪本地所有文件</span></div><div class="line">git add -u [path] <span class="comment"># 添加[指定路径下]已跟踪文件</span></div><div class="line"></div><div class="line">rm *&amp;git rm * <span class="comment"># 移除文件</span></div><div class="line">git rm <span class="_">-f</span> * <span class="comment"># 移除文件</span></div><div class="line">git rm --cached * <span class="comment"># 停止追踪指定文件，但该文件会保留在工作区</span></div><div class="line">git mv file_from file_to <span class="comment"># 重命名跟踪文件</span></div><div class="line"></div><div class="line">git <span class="built_in">log</span> <span class="comment"># 查看提交记录</span></div><div class="line"></div><div class="line">git commit <span class="comment"># 提交更新	</span></div><div class="line">git commit [file1] [file2] ... <span class="comment"># 提交指定文件	</span></div><div class="line">git commit -m <span class="string">'message'</span> <span class="comment">#附带备注更新信息</span></div><div class="line">git commit <span class="_">-a</span> <span class="comment"># 跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交</span></div><div class="line">git commit --amend <span class="comment">#修改最后一次提交</span></div><div class="line">git commit -v <span class="comment"># 提交时显示所有diff信息</span></div><div class="line"></div><div class="line">git reset HEAD * <span class="comment">#取消已经暂存的文件</span></div><div class="line">git reset --mixed HEAD * <span class="comment">#同上</span></div><div class="line">git reset --soft HEAD * <span class="comment">#重置到指定状态，不会修改索引区和工作树</span></div><div class="line">git reset --hard HEAD * <span class="comment">#重置到指定状态，会修改索引区和工作树</span></div><div class="line">git reset -- files <span class="comment">#重置index区文件</span></div><div class="line"></div><div class="line">git revert HEAD <span class="comment">#撤销前一次操作</span></div><div class="line">git revert HEAD~ <span class="comment">#撤销前前一次操作</span></div><div class="line">git revert commit <span class="comment">## 撤销指定操作</span></div><div class="line"></div><div class="line">git checkout -- file <span class="comment">#取消对文件的修改（从暂存区——覆盖worktree file）</span></div><div class="line">git checkout branch|tag|commit -- file_name <span class="comment">#从仓库取出file覆盖当前分支</span></div><div class="line">git checkout -- . <span class="comment">#从暂存区取出文件覆盖工作区</span></div><div class="line"></div><div class="line">git diff file <span class="comment">#查看指定文件的差异</span></div><div class="line">git diff --stat <span class="comment">#查看简单的diff结果</span></div><div class="line">git diff <span class="comment">#比较Worktree和Index之间的差异</span></div><div class="line">git diff --cached <span class="comment">#比较Index和HEAD之间的差异</span></div><div class="line">git diff HEAD <span class="comment">#比较Worktree和HEAD之间的差异</span></div><div class="line">git diff branch <span class="comment">#比较Worktree和branch之间的差异</span></div><div class="line">git diff branch1 branch2 <span class="comment">#比较两次分支之间的差异</span></div><div class="line">git diff commit commit <span class="comment">#比较两次提交之间的差异</span></div><div class="line"></div><div class="line"></div><div class="line">git <span class="built_in">log</span> <span class="comment">#查看最近的提交日志</span></div><div class="line">git <span class="built_in">log</span> --pretty=oneline <span class="comment">#单行显示提交日志</span></div><div class="line">git <span class="built_in">log</span> --graph <span class="comment"># 图形化显示</span></div><div class="line">git <span class="built_in">log</span> --abbrev-commit <span class="comment"># 显示log id的缩写</span></div><div class="line">git <span class="built_in">log</span> -num <span class="comment">#显示第几条log（倒数）</span></div><div class="line">git <span class="built_in">log</span> --stat <span class="comment"># 显示commit历史，以及每次commit发生变更的文件</span></div><div class="line">git <span class="built_in">log</span> --follow [file] <span class="comment"># 显示某个文件的版本历史，包括文件改名</span></div><div class="line">git <span class="built_in">log</span> -p [file] <span class="comment"># 显示指定文件相关的每一次diff</span></div><div class="line"></div><div class="line">git stash <span class="comment">#将工作区现场（已跟踪文件）储藏起来，等以后恢复后继续工作。</span></div><div class="line">git stash list <span class="comment">#查看保存的工作现场</span></div><div class="line">git stash apply <span class="comment">#恢复工作现场</span></div><div class="line">git stash drop <span class="comment">#删除stash内容</span></div><div class="line">git stash pop <span class="comment">#恢复的同时直接删除stash内容</span></div><div class="line">git stash apply stash@&#123;0&#125; <span class="comment">#恢复指定的工作现场，当你保存了不只一份工作现场时。</span></div></pre></td></tr></table></figure>
-<h1 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">git branch <span class="comment">#列出本地分支</span></div><div class="line">git branch -r <span class="comment">#列出远端分支</span></div><div class="line">git branch <span class="_">-a</span> <span class="comment">#列出所有分支</span></div><div class="line">git branch -v <span class="comment">#查看各个分支最后一个提交对象的信息</span></div><div class="line">git branch --merge <span class="comment">#查看已经合并到当前分支的分支</span></div><div class="line">git branch --no-merge <span class="comment">#查看为合并到当前分支的分支</span></div><div class="line">git branch <span class="built_in">test</span> <span class="comment">#新建test分支</span></div><div class="line">git branch branch [branch|commit|tag] <span class="comment"># 从指定位置出新建分支</span></div><div class="line">git branch --track branch remote-branch <span class="comment"># 新建一个分支，与指定的远程分支建立追踪关系</span></div><div class="line">git branch -m old new <span class="comment">#重命名分支</span></div><div class="line">git branch <span class="_">-d</span> <span class="built_in">test</span> <span class="comment">#删除test分支</span></div><div class="line">git branch -D <span class="built_in">test</span> <span class="comment">#强制删除test分支</span></div><div class="line">git branch --set-upstream dev origin/dev <span class="comment">#将本地dev分支与远程dev分支之间建立链接</span></div><div class="line"></div><div class="line">git checkout <span class="built_in">test</span> <span class="comment">#切换到test分支</span></div><div class="line">git checkout -b <span class="built_in">test</span> <span class="comment">#新建+切换到test分支</span></div><div class="line">git checkout -b <span class="built_in">test</span> dev <span class="comment">#基于dev新建test分支，并切换</span></div><div class="line"></div><div class="line">git merge <span class="built_in">test</span> <span class="comment">#将test分支合并到当前分支</span></div><div class="line">git merge --squash <span class="built_in">test</span> <span class="comment"># 合并压缩，将test上的commit压缩为一条</span></div><div class="line"></div><div class="line">git cherry-pick commit <span class="comment">#拣选合并，将commit合并到当前分支</span></div><div class="line">git cherry-pick -n commit <span class="comment">#拣选多个提交，合并完后可以继续拣选下一个提交</span></div><div class="line"></div><div class="line">git rebase master <span class="comment">#将master分之上超前的提交，变基到当前分支</span></div><div class="line">git rebase --onto master 169a6 <span class="comment">#限制回滚范围，rebase当前分支从169a6以后的提交</span></div><div class="line">git rebase --interactive <span class="comment">#交互模式	</span></div><div class="line">git rebase --continue <span class="comment"># 处理完冲突继续合并	</span></div><div class="line">git rebase --skip <span class="comment"># 跳过	</span></div><div class="line">git rebase --abort <span class="comment"># 取消合并</span></div></pre></td></tr></table></figure>
-<h1 id="远端操作"><a href="#远端操作" class="headerlink" title="远端操作"></a>远端操作</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">git fetch origin remotebranch[:localbranch] <span class="comment"># 从远端拉去分支[到本地指定分支]</span></div><div class="line"></div><div class="line">git merge origin/branch <span class="comment">#合并远端上指定分支</span></div><div class="line"></div><div class="line">git pull origin remotebranch:localbranch <span class="comment"># 拉去远端分支到本地分支</span></div><div class="line"></div><div class="line">git push origin branch <span class="comment">#将当前分支，推送到远端上指定分支</span></div><div class="line">git push origin localbranch:remotebranch <span class="comment">#推送本地指定分支，到远端上指定分支</span></div><div class="line">git push origin :remotebranch <span class="comment"># 删除远端指定分支</span></div><div class="line">git push origin remotebranch --delete <span class="comment"># 删除远程分支</span></div><div class="line">git branch -dr branch <span class="comment"># 删除本地和远程分支</span></div><div class="line">git checkout -b [--track] <span class="built_in">test</span> origin/dev <span class="comment"># 基于远端dev分支，新建本地test分支[同时设置跟踪]</span></div></pre></td></tr></table></figure>
-<h1 id="源"><a href="#源" class="headerlink" title="源"></a>源</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">git remote add origin1 git@github.com:xxxxxxx/xxxxx.git <span class="comment">#添加源</span></div><div class="line"></div><div class="line">git remote <span class="comment">#显示全部源</span></div><div class="line">git remote -v <span class="comment">#显示全部源+详细信息</span></div><div class="line"></div><div class="line">git remote rename origin1 origin2 <span class="comment">#重命名</span></div><div class="line"></div><div class="line">git remote rm origin <span class="comment">#删除</span></div><div class="line"></div><div class="line">git remote show origin <span class="comment">#查看指定源的全部信息</span></div></pre></td></tr></table></figure>
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">git tag<span class="comment">#列出现有标签	</span></div><div class="line"></div><div class="line">git tag v0.1 [branch|commit] <span class="comment"># [从指定位置]新建标签</span></div><div class="line">git tag <span class="_">-a</span> v0.1 -m <span class="string">'my version 1.4'</span> <span class="comment">#新建带注释标签</span></div><div class="line"></div><div class="line">git checkout tagname <span class="comment">#切换到标签</span></div><div class="line"></div><div class="line">git push origin v1.5 <span class="comment">#推送分支到源上</span></div><div class="line">git push origin --tags <span class="comment">#一次性推送所有分支</span></div><div class="line"></div><div class="line">git tag <span class="_">-d</span> v0.1 <span class="comment">#删除标签</span></div><div class="line">git push origin :refs/tags/v0.1 <span class="comment">#删除远程标签</span></div></pre></td></tr></table></figure>
-<h1 id="日常指令"><a href="#日常指令" class="headerlink" title="日常指令"></a>日常指令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">'message'</span></div><div class="line">git push origin branch</div><div class="line">git <span class="built_in">clone</span> git://github.com/xxxxxxxxx/xxx.git</div><div class="line">git pull origin remotebranch:localbranch</div><div class="line">git checkout -- file</div></pre></td></tr></table></figure>
+        <h1 id="Raspberry-Pi-简介"><a href="#Raspberry-Pi-简介" class="headerlink" title="Raspberry Pi 简介"></a>Raspberry Pi 简介</h1><p>Raspberry Pi原本是一款针对计算机编程教育的迷你计算机，仅有银行卡大小，但有丰富的外部接口，如HDMI，DSI，CSI，USB，GPIO，TF卡接口以及3.5mm音频接口。因此很多计算机爱好者开始用PI做各种各样的开发，从装了Kali的渗透利器到无所不能的家庭影院，都可以用树莓派来完成。可谓“麻雀虽小五脏俱全”。<br><img src="http://p1.bqimg.com/567571/4abf113a486e4b4e.png" alt=""><br><a id="more"></a><br>那这里就先来介绍下树莓派系统的安装方法。  </p>
+<h1 id="Raspberry-Pi的系统选择"><a href="#Raspberry-Pi的系统选择" class="headerlink" title="Raspberry Pi的系统选择"></a>Raspberry Pi的系统选择</h1><p>能适配Raspberry Pi的linux系统有很多，这里新手推荐树莓派基金会基于Debian专门为树莓派开发的Raspbian。下面也会给出一系列能适配树莓派的系统。</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="external">Raspbian</a>  推荐，可以不用显示器，只用一根网线就可以安装</li>
+<li><a href="https://www.raspberrypi.org/downloads/noobs/" target="_blank" rel="external">Noobs</a>  官方的多系统引导</li>
+<li><a href="https://ubuntu-mate.org/raspberry-pi/" target="_blank" rel="external">Ubuntu Mate</a></li>
+<li><a href="https://developer.ubuntu.com/core/get-started/raspberry-pi-2-3" target="_blank" rel="external">Snappy Ubuntu Core</a></li>
+<li><a href="http://mirrors.neusoft.edu.cn/kali-images/kali-2016.2/kali-linux-light-2016.2-armhf.img.xz" target="_blank" rel="external">Kali</a></li>
+<li><a href="http://sg.mirror.archlinuxarm.org/os/ArchLinuxARM-rpi-latest.tar.gz" target="_blank" rel="external">Arch</a></li>
+<li><a href="https://developer.microsoft.com/zh-cn/windows/iot/Downloads.htm" target="_blank" rel="external">Win10 IOT</a><h1 id="Raspbian系统烧录"><a href="#Raspbian系统烧录" class="headerlink" title="Raspbian系统烧录"></a>Raspbian系统烧录</h1>这里推荐的系统是Raspbian，简单容易配置所以适合新手。而系统烧录的方法大都大同小异，也可以借鉴，但是有的系统可能需要外接显示器，键鼠等设备才能进入系统进行配置及使用。<br>首先要看你的TF卡是否和树莓派兼容，<a href="http://elinux.org/RPi_SD_cards#Working_.2F_Non-working_SD_cards" target="_blank" rel="external">点这里</a>查看列表。<br>然后需要下载<a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="external">Win32DiskDiskImager</a>和Raspbian，然后解压得到一个<code>img</code>镜像。<br><img src="http://p1.bqimg.com/567571/62b097ef9280f083.jpg" alt=""><br>在Win32DiskDiskImager选择你的TF卡，以及你自己的系统镜像，然后点<code>Write</code>等待烧录成功，你的系统就做好了。  <h1 id="SSH直连树莓派"><a href="#SSH直连树莓派" class="headerlink" title="SSH直连树莓派"></a>SSH直连树莓派</h1><strong>最新版的raspbian默认关闭了SSH，所以先要在<code>boot</code>分区里面建立一个名为<code>SSH</code>的文件</strong><br><img src="http://p1.bpimg.com/567571/b9f43cbc36627133.jpg" alt="">  </li>
+</ul>
+<p>首先要有一根网线，让你的树莓派与路由器相连，然后就可以在路由器的DHCP客户列表下找到你的树莓派IP了<br><img src="http://p1.bpimg.com/567571/3024e084b254a2ae.jpg" alt="">  </p>
+<p>然后下载<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="external">PuTTY</a>在里面填入对应的树莓派IP地址打开就可以了，进去后会有个安全提示，点是即可。<br><img src="http://i1.piimg.com/567571/899c631baa064bf3.jpg" alt=""><br>接着输入默认的用户名密码就可以进入系统了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">用户名：pi</div><div class="line">密码：raspberry</div></pre></td></tr></table></figure></p>
+<p><img src="http://p1.bpimg.com/567571/f7578549f271c84f.jpg" alt=""><br>然后输入下面命令开始配置系统。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo raspi-config</div></pre></td></tr></table></figure></p>
+<p><img src="http://p1.bqimg.com/567571/d1929f4ee2adde84.jpg" alt=""><br>选<code>Advanced Options</code>，再选<code>Expand Filesystem</code>来扩展使用空间。重启后生效。<br>还有在<code>Interfacing Options</code>里面可以开启你需要的接口，比如<code>VNC</code>，<code>GPIO</code>，<code>I2C</code>，<code>SPI</code>等等。<br>接下来就是发挥你想象力的时候了，开始折腾你的树莓派吧。</p>
+
       
 
       
@@ -202,7 +208,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
         		</li>
       		
 		</ul>
@@ -221,18 +227,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/02/27/raspberrypi装系统/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          raspberry pi 装系统
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/02/04/七牛云-极简图床作为Markdown图床/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">七牛云+极简图床作为Markdown图床</div>
+    <a href="/2017/02/11/git常用指令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git常用指令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -246,7 +243,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="git常用指令" data-title="git常用指令" data-url="http://SkywalkerDarren.com/2017/02/11/git常用指令/"></div>
+	<div class="ds-thread" data-thread-key="raspberrypi装系统" data-title="raspberry pi 装系统" data-url="http://SkywalkerDarren.com/2017/02/27/raspberrypi装系统/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
