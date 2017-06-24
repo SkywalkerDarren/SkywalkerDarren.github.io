@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://SkywalkerDarren.com">
-  <title>Arch+VMware+UEFI+Gnome安装 | SkywalkerDarren</title>
+  <title>Arch + VMware + UEFI + Gnome安装 | SkywalkerDarren</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本文旨在从VMware+UEFI安装Arch以及配置Gnome桌面环境，更详细的的安装教程请参考Arch Wiki)。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Arch+VMware+UEFI+Gnome安装">
+<meta property="og:title" content="Arch + VMware + UEFI + Gnome安装">
 <meta property="og:url" content="http://SkywalkerDarren.com/2017/05/28/Arch-+-VMware-+-UEFI-+-安装/index.html">
 <meta property="og:site_name" content="SkywalkerDarren">
 <meta property="og:description" content="本文旨在从VMware+UEFI安装Arch以及配置Gnome桌面环境，更详细的的安装教程请参考Arch Wiki)。">
@@ -37,9 +37,9 @@
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-5-28/77816958.jpg">
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-5-28/5066611.jpg">
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-5-28/35268505.jpg">
-<meta property="og:updated_time" content="2017-06-24T06:18:07.240Z">
+<meta property="og:updated_time" content="2017-06-24T07:49:10.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Arch+VMware+UEFI+Gnome安装">
+<meta name="twitter:title" content="Arch + VMware + UEFI + Gnome安装">
 <meta name="twitter:description" content="本文旨在从VMware+UEFI安装Arch以及配置Gnome桌面环境，更详细的的安装教程请参考Arch Wiki)。">
 <meta name="twitter:image" content="http://okqqc0v2n.bkt.clouddn.com/17-5-28/83580649.jpg">
   
@@ -183,7 +183,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      Arch+VMware+UEFI+Gnome安装
+      Arch + VMware + UEFI + Gnome安装
     </h1>
   
 
@@ -196,84 +196,180 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文旨在从VMware+UEFI安装Arch以及配置Gnome桌面环境，更详细的的安装教程请参考<a href="https://wiki.archlinux.org/index.php/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="external">Arch Wiki</a>)。<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/83580649.jpg" alt=""><br><a id="more"></a></p>
-<h1 id="VMware配置"><a href="#VMware配置" class="headerlink" title="VMware配置"></a>VMware配置</h1><p>首先新建虚拟机，选自定义<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/87421627.jpg" alt=""><br>兼容性默认即可<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/6931808.jpg" alt=""><br>打开你Arch所在位置<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/5418077.jpg" alt=""><br>客户机选Linux，内核没有Arch，随便选个64位的<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/31612588.jpg" alt=""><br>命名你的系统<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/74588172.jpg" alt=""><br>这里根据你的物理机实际情况设置<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/61965756.jpg" alt=""><br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/40245215.jpg" alt=""><br>余下如图<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/54547146.jpg" alt=""><br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/11626110.jpg" alt=""><br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/62202143.jpg" alt=""><br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/58882437.jpg" alt=""><br>根据你的实际情况分配磁盘大小和路径<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/30622448.jpg" alt=""><br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/9828695.jpg" alt=""><br>完成<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/27575624.jpg" alt=""><br><strong>重点！！ 设置UEFI启动</strong><br>在<code>虚拟机 -&gt; 设置</code>的<code>选项</code>选项卡里面，选<code>高级</code>，将<code>通过EFI而非BIOS引导</code>勾选<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/73509197.jpg" alt=""><br>这样一来就算是设置完VMware的UEFI启动了。</p>
-<h1 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h1><p>打开虚拟机选择第一个<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/38472916.jpg" alt=""><br>进入系统<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/23932737.jpg" alt=""></p>
+        <p>本文旨在从VMware+UEFI安装Arch以及配置Gnome桌面环境，更详细的的安装教程请参考<a href="https://wiki.archlinux.org/index.php/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="external">Arch Wiki</a>)。<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/83580649.jpg" alt=""></p>
+<a id="more"></a>
+<h1 id="VMware配置"><a href="#VMware配置" class="headerlink" title="VMware配置"></a>VMware配置</h1><p>首先新建虚拟机，选自定义</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/87421627.jpg" alt=""></p>
+<p>兼容性默认即可</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/6931808.jpg" alt=""></p>
+<p>打开你Arch所在位置</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/5418077.jpg" alt=""></p>
+<p>客户机选Linux，内核没有Arch，随便选个64位的</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/31612588.jpg" alt=""></p>
+<p>命名你的系统</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/74588172.jpg" alt=""></p>
+<p>这里根据你的物理机实际情况设置</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/61965756.jpg" alt=""></p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/40245215.jpg" alt=""></p>
+<p>余下如图</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/54547146.jpg" alt=""></p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/11626110.jpg" alt=""></p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/62202143.jpg" alt=""></p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/58882437.jpg" alt=""></p>
+<p>根据你的实际情况分配磁盘大小和路径</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/30622448.jpg" alt=""></p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/9828695.jpg" alt=""></p>
+<p>完成<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/27575624.jpg" alt=""></p>
+<p>看这里！！<strong>重点！！ 设置UEFI启动</strong></p>
+<p>在<code>虚拟机 -&gt; 设置</code>的<code>选项</code>选项卡里面，选<code>高级</code>，将<code>通过EFI而非BIOS引导</code>勾选</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/73509197.jpg" alt=""></p>
+<p>这样一来就算是设置完VMware的UEFI启动了。</p>
+<h1 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h1><p>打开虚拟机选择第一个</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/38472916.jpg" alt=""></p>
+<p>进入系统</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/23932737.jpg" alt=""></p>
 <h2 id="验证启动模式"><a href="#验证启动模式" class="headerlink" title="验证启动模式"></a>验证启动模式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls /sys/firmware/efi/efivars</div></pre></td></tr></table></figure>
-<p>如果找不到文件那么你不是UEFI启动<br>请看上边最后一条的虚拟机设置UEFI启动</p>
+<p>如果找不到文件那么你不是UEFI启动</p>
+<p>请看上边最后一条的虚拟机设置UEFI启动</p>
 <h2 id="联网测试"><a href="#联网测试" class="headerlink" title="联网测试"></a>联网测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping -c 3 www.baidu.com</div></pre></td></tr></table></figure>
 <p>如果未成功请检查虚拟机的设置，如NAT服务是否打开，重启虚拟机</p>
 <h2 id="更新系统时间"><a href="#更新系统时间" class="headerlink" title="更新系统时间"></a>更新系统时间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">timedatectl <span class="built_in">set</span>-ntp <span class="literal">true</span></div></pre></td></tr></table></figure>
 <p>可以用<code>timedatectl status</code>来查看当前时间（格林尼治时间）</p>
-<h2 id="建立分区"><a href="#建立分区" class="headerlink" title="建立分区"></a>建立分区</h2><p>熟悉的朋友可以通过<code>fdisk</code>来分区<br>简单的也可以用简单的<code>cfdisk</code>的图形画界面来分区<br>因为我们是UEFI虚拟机，因此至少需要3个分区，EFI分区（分配大约200-300M），swap分区（在拥有不足 512 MB 内存的机器上，通常为 swap 分区分配2倍内存大小的空间。如果有更大的内存（大于 1024 MB），可以分配较少的空间，wiki建议虚拟机应该分配swap以便休眠），根分区<code>/</code>（余下空间的大小）<br>执行cfdisk<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cfdisk /dev/sda</div></pre></td></tr></table></figure></p>
-<p>选第一个GPT<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/72579941.jpg" alt=""><br>选NEW分出3个分区<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/64373372.jpg" alt=""><br>再依次更改type<br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/77816958.jpg" alt=""><br>最后Write保存，输入<code>yes</code><br><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/5066611.jpg" alt=""><br>用<code>fdisk -l /dev/sda</code>来检查分区是否正确</p>
-<h2 id="格式化分区"><a href="#格式化分区" class="headerlink" title="格式化分区"></a>格式化分区</h2><p>将EFI分区格式化为FAT32<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkfs.fat -F32 /dev/sda1</div></pre></td></tr></table></figure></p>
-<p>将根分区格式化为ext4<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkfs.ext4 /dev/sda2</div></pre></td></tr></table></figure></p>
-<p>创建swap分区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkswap /dev/sda3</div><div class="line">swapon /dev/sda3</div></pre></td></tr></table></figure></p>
-<h2 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h2><p>首先挂载根分区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sda2 /mnt</div></pre></td></tr></table></figure></p>
-<p>然后创建<code>boot</code>分区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir /mnt/boot</div></pre></td></tr></table></figure></p>
-<p>在挂载efi分区到boot<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sda1 /mnt/boot</div></pre></td></tr></table></figure></p>
+<h2 id="建立分区"><a href="#建立分区" class="headerlink" title="建立分区"></a>建立分区</h2><p>熟悉的朋友可以通过<code>fdisk</code>来分区</p>
+<p>简单的也可以用简单的<code>cfdisk</code>的图形画界面来分区</p>
+<p>因为我们是UEFI虚拟机，因此至少需要3个分区，EFI分区（分配大约200-300M），swap分区（在拥有不足 512 MB 内存的机器上，通常为 swap 分区分配2倍内存大小的空间。如果有更大的内存（大于 1024 MB），可以分配较少的空间，wiki建议虚拟机应该分配swap以便休眠），根分区<code>/</code>（余下空间的大小）</p>
+<p>执行cfdisk</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cfdisk /dev/sda</div></pre></td></tr></table></figure>
+<p>选第一个GPT</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/72579941.jpg" alt=""></p>
+<p>选NEW分出3个分区</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/64373372.jpg" alt=""></p>
+<p>再依次更改type</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/77816958.jpg" alt=""></p>
+<p>最后Write保存，输入<code>yes</code></p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/5066611.jpg" alt=""></p>
+<p>用<code>fdisk -l /dev/sda</code>来检查分区是否正确</p>
+<h2 id="格式化分区"><a href="#格式化分区" class="headerlink" title="格式化分区"></a>格式化分区</h2><p>将EFI分区格式化为FAT32</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkfs.fat -F32 /dev/sda1</div></pre></td></tr></table></figure>
+<p>将根分区格式化为ext4</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkfs.ext4 /dev/sda2</div></pre></td></tr></table></figure>
+<p>创建swap分区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkswap /dev/sda3</div><div class="line">swapon /dev/sda3</div></pre></td></tr></table></figure>
+<h2 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h2><p>首先挂载根分区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sda2 /mnt</div></pre></td></tr></table></figure>
+<p>然后创建<code>boot</code>分区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir /mnt/boot</div></pre></td></tr></table></figure>
+<p>在挂载efi分区到boot</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sda1 /mnt/boot</div></pre></td></tr></table></figure>
 <p>如果挂错分区则用<code>umount</code>卸载分区，再重新挂载</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="选择合适的源"><a href="#选择合适的源" class="headerlink" title="选择合适的源"></a>选择合适的源</h2><p>编辑源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/pacman.d/mirrorlist</div></pre></td></tr></table></figure></p>
-<p>在第一行加上163的源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Server = http://mirrors.aliyun.com/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></div></pre></td></tr></table></figure></p>
-<p>然后更新源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -Syy</div></pre></td></tr></table></figure></p>
-<h2 id="安装基本系统"><a href="#安装基本系统" class="headerlink" title="安装基本系统"></a>安装基本系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacstrap /mnt base base-devel</div></pre></td></tr></table></figure>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="选择合适的源"><a href="#选择合适的源" class="headerlink" title="选择合适的源"></a>选择合适的源</h2><p>编辑源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/pacman.d/mirrorlist</div></pre></td></tr></table></figure>
+<p>在第一行加上163的源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Server = http://mirrors.aliyun.com/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></div></pre></td></tr></table></figure>
+<p>然后更新源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -Syy</div></pre></td></tr></table></figure>
+<h2 id="安装基本系统"><a href="#安装基本系统" class="headerlink" title="安装基本系统"></a>安装基本系统</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacstrap /mnt base base-devel</div></pre></td></tr></table></figure>
 <h1 id="配置系统"><a href="#配置系统" class="headerlink" title="配置系统"></a>配置系统</h1><h2 id="生成fstab"><a href="#生成fstab" class="headerlink" title="生成fstab"></a>生成fstab</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</div></pre></td></tr></table></figure>
-<p>然后检查下fstab<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /mnt/etc/fstab</div></pre></td></tr></table></figure></p>
+<p>然后检查下fstab</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /mnt/etc/fstab</div></pre></td></tr></table></figure>
 <p>应该有sda1，sda2，sda3</p>
-<h2 id="改变根路径"><a href="#改变根路径" class="headerlink" title="改变根路径"></a>改变根路径</h2><p>将根目录改变到新系统中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arch-chroot /mnt</div></pre></td></tr></table></figure></p>
+<h2 id="改变根路径"><a href="#改变根路径" class="headerlink" title="改变根路径"></a>改变根路径</h2><p>将根目录改变到新系统中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arch-chroot /mnt</div></pre></td></tr></table></figure>
 <h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</div></pre></td></tr></table></figure>
-<p>设置中国时区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hwclock --systohc --utc</div></pre></td></tr></table></figure></p>
+<p>设置中国时区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hwclock --systohc --utc</div></pre></td></tr></table></figure>
 <p>设置时间标准为utc</p>
-<h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><p>编辑本地化文本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/locale.gen</div></pre></td></tr></table></figure></p>
-<p>文件里面仅含注释，找到这几行，将这几个前面的<code>#</code>去掉即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">en_US.UTF-8 UTF-8</div><div class="line">zh_CN.UTF-8 UTF-8</div><div class="line">zh_TW.UTF-8 UTF-8</div></pre></td></tr></table></figure></p>
-<p>然后生成locale.gen文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">locale-gen</div></pre></td></tr></table></figure></p>
-<p>将系统locale设为英语，这样不容易出现乱码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> LANG=en_US.UTF-8 &gt; /etc/locale.conf</div></pre></td></tr></table></figure></p>
-<h2 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h2><p>设置你的主机名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> 你的主机名 &gt; /etc/hostname</div></pre></td></tr></table></figure></p>
-<p>建议添加对应的信息到hosts<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/hosts</div></pre></td></tr></table></figure></p>
-<p>追加一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">127.0.1.1	你的主机名.localdomain	你的主机名</div></pre></td></tr></table></figure></p>
-<h2 id="初始化RAM-disk"><a href="#初始化RAM-disk" class="headerlink" title="初始化RAM disk"></a>初始化RAM disk</h2><p>用以下命令创建一个初始 RAM disk<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkinitcpio -p linux</div></pre></td></tr></table></figure></p>
-<h2 id="Root密码"><a href="#Root密码" class="headerlink" title="Root密码"></a>Root密码</h2><p>设置root密码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd</div></pre></td></tr></table></figure></p>
-<h2 id="安装grub引导"><a href="#安装grub引导" class="headerlink" title="安装grub引导"></a>安装grub引导</h2><p>安装grub和efibootmgr<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S grub efibootmgr</div></pre></td></tr></table></figure></p>
-<p>安装grub配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub</div></pre></td></tr></table></figure></p>
-<p>仅出现两行提示，no error report<br>然后生成grub配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grub-mkconfig -o /boot/grub/grub.cfg</div></pre></td></tr></table></figure></p>
-<p>然后退回光驱的目录，卸载目录，关机，取出虚拟机光驱<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span></div><div class="line">umount -R /mnt</div><div class="line">poweroff</div></pre></td></tr></table></figure></p>
+<h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><p>编辑本地化文本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/locale.gen</div></pre></td></tr></table></figure>
+<p>文件里面仅含注释，找到这几行，将这几个前面的<code>#</code>去掉即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">en_US.UTF-8 UTF-8</div><div class="line">zh_CN.UTF-8 UTF-8</div><div class="line">zh_TW.UTF-8 UTF-8</div></pre></td></tr></table></figure>
+<p>然后生成locale.gen文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">locale-gen</div></pre></td></tr></table></figure>
+<p>将系统locale设为英语，这样不容易出现乱码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> LANG=en_US.UTF-8 &gt; /etc/locale.conf</div></pre></td></tr></table></figure>
+<h2 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h2><p>设置你的主机名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> 你的主机名 &gt; /etc/hostname</div></pre></td></tr></table></figure>
+<p>建议添加对应的信息到hosts</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/hosts</div></pre></td></tr></table></figure>
+<p>追加一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">127.0.1.1    你的主机名.localdomain    你的主机名</div></pre></td></tr></table></figure>
+<h2 id="初始化RAM-disk"><a href="#初始化RAM-disk" class="headerlink" title="初始化RAM disk"></a>初始化RAM disk</h2><p>用以下命令创建一个初始 RAM disk</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkinitcpio -p linux</div></pre></td></tr></table></figure>
+<h2 id="Root密码"><a href="#Root密码" class="headerlink" title="Root密码"></a>Root密码</h2><p>设置root密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd</div></pre></td></tr></table></figure>
+<h2 id="安装grub引导"><a href="#安装grub引导" class="headerlink" title="安装grub引导"></a>安装grub引导</h2><p>安装grub和efibootmgr</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S grub efibootmgr</div></pre></td></tr></table></figure>
+<p>安装grub配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub</div></pre></td></tr></table></figure>
+<p>仅出现两行提示，no error report</p>
+<p>然后生成grub配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grub-mkconfig -o /boot/grub/grub.cfg</div></pre></td></tr></table></figure>
+<p>然后退回光驱的目录，卸载目录，关机，取出虚拟机光驱</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span></div><div class="line">umount -R /mnt</div><div class="line">poweroff</div></pre></td></tr></table></figure>
 <h1 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h1><p>再次开机进入系统，登录名<code>root</code>，密码是你自己设的密码</p>
 <h2 id="测试网络"><a href="#测试网络" class="headerlink" title="测试网络"></a>测试网络</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping -c 3 www.baidu.com</div></pre></td></tr></table></figure>
-<p>如果无法连接，则运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dhcpcd</div></pre></td></tr></table></figure></p>
-<p>然后将dhcp设为开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> dhcpcd.service</div></pre></td></tr></table></figure></p>
-<p>将网络管理也设为开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> NetworkManager.service</div></pre></td></tr></table></figure></p>
-<h2 id="安装ZSH"><a href="#安装ZSH" class="headerlink" title="安装ZSH"></a>安装ZSH</h2><p>先安装<code>zsh</code>来替代<code>bash</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S zsh</div></pre></td></tr></table></figure></p>
-<h2 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h2><p>接下来就是创建用户<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd -m -g users -G wheel <span class="_">-s</span> /bin/zsh 你的用户名</div></pre></td></tr></table></figure></p>
-<p>然后设置密码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd 你的用户名</div></pre></td></tr></table></figure></p>
-<h2 id="提升权限"><a href="#提升权限" class="headerlink" title="提升权限"></a>提升权限</h2><p>安装<code>sudo</code>命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S sudo</div></pre></td></tr></table></figure></p>
-<p>编辑sudoers，为用户添加最高权限<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/sudoers</div></pre></td></tr></table></figure></p>
-<p>找到<code>root ALL=(ALL) ALL</code>,在下面添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">你的用户名 ALL=(ALL) ALL</div></pre></td></tr></table></figure></p>
-<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><h1 id="用户界面"><a href="#用户界面" class="headerlink" title="用户界面"></a>用户界面</h1><h2 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h2><p>安装图形界面所需要的显卡，键盘，鼠标驱动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pacman -S xf86-video-vmware</div><div class="line">pacman -S xf86-input-keyboard</div><div class="line">pacman -S xf86-input-mouse</div></pre></td></tr></table></figure></p>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>先要安装字体<br>这里推荐几个好看的字体<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S wqy-zenhei wqy-microhei</div></pre></td></tr></table></figure></p>
-<p>文泉驿中文字体<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S adobe-source-code-pro-fonts ttf-dejavu</div></pre></td></tr></table></figure></p>
+<p>如果无法连接，则运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dhcpcd</div></pre></td></tr></table></figure>
+<p>然后将dhcp设为开机启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> dhcpcd.service</div></pre></td></tr></table></figure>
+<p>将网络管理也设为开机启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> NetworkManager.service</div></pre></td></tr></table></figure>
+<h2 id="安装ZSH"><a href="#安装ZSH" class="headerlink" title="安装ZSH"></a>安装ZSH</h2><p>先安装<code>zsh</code>来替代<code>bash</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S zsh</div></pre></td></tr></table></figure>
+<h2 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h2><p>接下来就是创建用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd -m -g users -G wheel <span class="_">-s</span> /bin/zsh 你的用户名</div></pre></td></tr></table></figure>
+<p>然后设置密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd 你的用户名</div></pre></td></tr></table></figure>
+<h2 id="提升权限"><a href="#提升权限" class="headerlink" title="提升权限"></a>提升权限</h2><p>安装<code>sudo</code>命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S sudo</div></pre></td></tr></table></figure>
+<p>编辑sudoers，为用户添加最高权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/sudoers</div></pre></td></tr></table></figure>
+<p>找到<code>root ALL=(ALL) ALL</code>,在下面添加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">你的用户名 ALL=(ALL) ALL</div></pre></td></tr></table></figure>
+<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><h1 id="用户界面"><a href="#用户界面" class="headerlink" title="用户界面"></a>用户界面</h1><h2 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h2><p>安装图形界面所需要的显卡，键盘，鼠标驱动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pacman -S xf86-video-vmware</div><div class="line">pacman -S xf86-input-keyboard</div><div class="line">pacman -S xf86-input-mouse</div></pre></td></tr></table></figure>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>先要安装字体<br>这里推荐几个好看的字体</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S wqy-zenhei wqy-microhei</div></pre></td></tr></table></figure>
+<p>文泉驿中文字体</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S adobe-source-code-pro-fonts ttf-dejavu</div></pre></td></tr></table></figure>
 <p>适合编程的等宽字体</p>
-<h2 id="安装gnome"><a href="#安装gnome" class="headerlink" title="安装gnome"></a>安装gnome</h2><p>先安装xorg桌面框架<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S xorg xorg-server xorg-xinit xorg-apps</div></pre></td></tr></table></figure></p>
-<p>在安装gnome gnome-extra，其中gnome-extra可以不完全安装，只装部分组件即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S gnome gnome-extra</div></pre></td></tr></table></figure></p>
-<p>extra推荐的包：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">anjuta                  <span class="comment">#gnome开发用的IDE</span></div><div class="line">cheese                  <span class="comment">#茄子大头贴，聊天工具必备摄像头组件</span></div><div class="line">devhelp                 <span class="comment">#gnome开发者文档浏览器</span></div><div class="line">gnome-devel-docs        <span class="comment">#gnome开发者文档</span></div><div class="line">evolution               <span class="comment">#gnome邮件软件</span></div><div class="line">gedit                   <span class="comment">#gnome文本编辑器</span></div><div class="line">gnome-color-manager     <span class="comment">#gnome色彩管理器</span></div><div class="line">gnome-nettool           <span class="comment">#gnome网络工具</span></div><div class="line">file-roller             <span class="comment">#gnome归档管理器</span></div><div class="line">seahorse                <span class="comment">#保存程序的PGP密钥</span></div><div class="line">vinagre	                <span class="comment">#gnome 桌面的远程控制服务</span></div></pre></td></tr></table></figure></p>
-<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/35268505.jpg" alt=""><br>更改以下设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano ~/.xinitrc</div></pre></td></tr></table></figure></p>
-<p>添加一行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exec</span> gnome-session</div></pre></td></tr></table></figure></p>
-<p>接下来重启就能进入图形界面了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure></p>
+<h2 id="安装gnome"><a href="#安装gnome" class="headerlink" title="安装gnome"></a>安装gnome</h2><p>先安装xorg桌面框架</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S xorg xorg-server xorg-xinit xorg-apps</div></pre></td></tr></table></figure>
+<p>在安装gnome gnome-extra，其中gnome-extra可以不完全安装，只装部分组件即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S gnome gnome-extra</div></pre></td></tr></table></figure>
+<p>extra推荐的包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">anjuta                  <span class="comment">#gnome开发用的IDE</span></div><div class="line">cheese                  <span class="comment">#茄子大头贴，聊天工具必备摄像头组件</span></div><div class="line">devhelp                 <span class="comment">#gnome开发者文档浏览器</span></div><div class="line">gnome-devel-docs        <span class="comment">#gnome开发者文档</span></div><div class="line">evolution               <span class="comment">#gnome邮件软件</span></div><div class="line">gedit                   <span class="comment">#gnome文本编辑器</span></div><div class="line">gnome-color-manager     <span class="comment">#gnome色彩管理器</span></div><div class="line">gnome-nettool           <span class="comment">#gnome网络工具</span></div><div class="line">file-roller             <span class="comment">#gnome归档管理器</span></div><div class="line">seahorse                <span class="comment">#保存程序的PGP密钥</span></div><div class="line">vinagre                 <span class="comment">#gnome 桌面的远程控制服务</span></div></pre></td></tr></table></figure>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/35268505.jpg" alt=""></p>
+<p>更改以下设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano ~/.xinitrc</div></pre></td></tr></table></figure>
+<p>添加一行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exec</span> gnome-session</div></pre></td></tr></table></figure>
+<p>接下来重启就能进入图形界面了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure>
 <h1 id="安装必备软件"><a href="#安装必备软件" class="headerlink" title="安装必备软件"></a>安装必备软件</h1><p>重启后进入你自己创的用户，此后一些命令需要加<code>sudo</code>来提升权限</p>
 <h2 id="时间同步"><a href="#时间同步" class="headerlink" title="时间同步"></a>时间同步</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S ntp</div></pre></td></tr></table></figure>
-<h2 id="强化zsh"><a href="#强化zsh" class="headerlink" title="强化zsh"></a>强化zsh</h2><p>安装oh-my-zsh，此神器强无敌带增强的自动补全<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></div></pre></td></tr></table></figure></p>
-<h2 id="yaourt"><a href="#yaourt" class="headerlink" title="yaourt"></a>yaourt</h2><p>添加yaourt的源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nano /etc/pacman.conf</div></pre></td></tr></table></figure></p>
-<p>在最后追加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[archlinuxcn]</div><div class="line">#The Chinese Arch Linux communities packages.</div><div class="line">SigLevel = Optional TrustAll</div><div class="line">Server   = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</div></pre></td></tr></table></figure></p>
-<p>然后安装yaourt<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -Sy yaourt</div></pre></td></tr></table></figure></p>
-<h2 id="pacman的图形化前端"><a href="#pacman的图形化前端" class="headerlink" title="pacman的图形化前端"></a>pacman的图形化前端</h2><p>安装packagekit<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S gnome-packagekit</div></pre></td></tr></table></figure></p>
-<h2 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h2><p>安装fcitx框架<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S fcitx-im</div><div class="line">sudo pacman -S fcitx-qt5</div></pre></td></tr></table></figure></p>
-<p>安装fcitx图形配置工具<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S fcitx-configtool</div></pre></td></tr></table></figure></p>
-<p>在家目录<code>~</code>创建<code>.xprofile</code>并添加配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano .xprofile</div></pre></td></tr></table></figure></p>
+<h2 id="强化zsh"><a href="#强化zsh" class="headerlink" title="强化zsh"></a>强化zsh</h2><p>安装oh-my-zsh，此神器强无敌带增强的自动补全</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></div></pre></td></tr></table></figure>
+<h2 id="yaourt"><a href="#yaourt" class="headerlink" title="yaourt"></a>yaourt</h2><p>添加yaourt的源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nano /etc/pacman.conf</div></pre></td></tr></table></figure>
+<p>在最后追加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[archlinuxcn]</div><div class="line"><span class="comment">#The Chinese Arch Linux communities packages.</span></div><div class="line">SigLevel = Optional TrustAll</div><div class="line">Server   = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="variable">$arch</span></div></pre></td></tr></table></figure>
+<p>然后安装yaourt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -Sy yaourt</div></pre></td></tr></table></figure>
+<h2 id="pacman的图形化前端"><a href="#pacman的图形化前端" class="headerlink" title="pacman的图形化前端"></a>pacman的图形化前端</h2><p>安装packagekit</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S gnome-packagekit</div></pre></td></tr></table></figure>
+<h2 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h2><p>安装fcitx框架</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S fcitx-im</div><div class="line">sudo pacman -S fcitx-qt5</div></pre></td></tr></table></figure>
+<p>安装fcitx图形配置工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S fcitx-configtool</div></pre></td></tr></table></figure>
+<p>在家目录<code>~</code>创建<code>.xprofile</code>并添加配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano .xprofile</div></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</div><div class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</div><div class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></div></pre></td></tr></table></figure>
-<p>安装搜狗拼音<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yaourt -S fcitx-sogoupinyin</div></pre></td></tr></table></figure></p>
+<p>安装搜狗拼音</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yaourt -S fcitx-sogoupinyin</div></pre></td></tr></table></figure>
 <p>重启后<code>fcitx-configtool</code>左下角加号添加输入法即可</p>
-<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>这里推荐安装FireFox<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S firefox firefox-i18n-zh-cn</div></pre></td></tr></table></figure></p>
-
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>这里推荐安装FireFox</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S firefox firefox-i18n-zh-cn</div></pre></td></tr></table></figure>
       
 
       
@@ -334,7 +430,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Arch-+-VMware-+-UEFI-+-安装" data-title="Arch+VMware+UEFI+Gnome安装" data-url="http://SkywalkerDarren.com/2017/05/28/Arch-+-VMware-+-UEFI-+-安装/"></div>
+	<div class="ds-thread" data-thread-key="Arch-+-VMware-+-UEFI-+-安装" data-title="Arch + VMware + UEFI + Gnome安装" data-url="http://SkywalkerDarren.com/2017/05/28/Arch-+-VMware-+-UEFI-+-安装/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -438,11 +534,27 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Arch</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -471,22 +583,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
