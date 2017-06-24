@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-5-28/77816958.jpg">
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-5-28/5066611.jpg">
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-5-28/35268505.jpg">
-<meta property="og:updated_time" content="2017-05-28T15:22:39.546Z">
+<meta property="og:updated_time" content="2017-06-24T06:18:07.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arch+VMware+UEFI+Gnome安装">
 <meta name="twitter:description" content="本文旨在从VMware+UEFI安装Arch以及配置Gnome桌面环境，更详细的的安装教程请参考Arch Wiki)。">
@@ -212,10 +212,10 @@ var _hmt = _hmt || [];
 <p>创建swap分区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkswap /dev/sda3</div><div class="line">swapon /dev/sda3</div></pre></td></tr></table></figure></p>
 <h2 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h2><p>首先挂载根分区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sda2 /mnt</div></pre></td></tr></table></figure></p>
 <p>然后创建<code>boot</code>分区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir /mnt/boot</div></pre></td></tr></table></figure></p>
-<p>在挂载efi分区到boot<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sda1</div></pre></td></tr></table></figure></p>
+<p>在挂载efi分区到boot<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sda1 /mnt/boot</div></pre></td></tr></table></figure></p>
 <p>如果挂错分区则用<code>umount</code>卸载分区，再重新挂载</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="选择合适的源"><a href="#选择合适的源" class="headerlink" title="选择合适的源"></a>选择合适的源</h2><p>编辑源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano /etc/pacman.d/mirrorlist</div></pre></td></tr></table></figure></p>
-<p>在第一行加上163的源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Server = http://mirrors.163.com/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></div></pre></td></tr></table></figure></p>
+<p>在第一行加上163的源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Server = http://mirrors.aliyun.com/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></div></pre></td></tr></table></figure></p>
 <p>然后更新源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -Syy</div></pre></td></tr></table></figure></p>
 <h2 id="安装基本系统"><a href="#安装基本系统" class="headerlink" title="安装基本系统"></a>安装基本系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacstrap /mnt base base-devel</div></pre></td></tr></table></figure>
 <h1 id="配置系统"><a href="#配置系统" class="headerlink" title="配置系统"></a>配置系统</h1><h2 id="生成fstab"><a href="#生成fstab" class="headerlink" title="生成fstab"></a>生成fstab</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</div></pre></td></tr></table></figure>
@@ -253,7 +253,7 @@ var _hmt = _hmt || [];
 <h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>先要安装字体<br>这里推荐几个好看的字体<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S wqy-zenhei wqy-microhei</div></pre></td></tr></table></figure></p>
 <p>文泉驿中文字体<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S adobe-source-code-pro-fonts ttf-dejavu</div></pre></td></tr></table></figure></p>
 <p>适合编程的等宽字体</p>
-<h2 id="安装gnome"><a href="#安装gnome" class="headerlink" title="安装gnome"></a>安装gnome</h2><p>先安装xorg桌面框架<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S xorg</div></pre></td></tr></table></figure></p>
+<h2 id="安装gnome"><a href="#安装gnome" class="headerlink" title="安装gnome"></a>安装gnome</h2><p>先安装xorg桌面框架<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S xorg xorg-server xorg-xinit xorg-apps</div></pre></td></tr></table></figure></p>
 <p>在安装gnome gnome-extra，其中gnome-extra可以不完全安装，只装部分组件即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pacman -S gnome gnome-extra</div></pre></td></tr></table></figure></p>
 <p>extra推荐的包：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">anjuta                  <span class="comment">#gnome开发用的IDE</span></div><div class="line">cheese                  <span class="comment">#茄子大头贴，聊天工具必备摄像头组件</span></div><div class="line">devhelp                 <span class="comment">#gnome开发者文档浏览器</span></div><div class="line">gnome-devel-docs        <span class="comment">#gnome开发者文档</span></div><div class="line">evolution               <span class="comment">#gnome邮件软件</span></div><div class="line">gedit                   <span class="comment">#gnome文本编辑器</span></div><div class="line">gnome-color-manager     <span class="comment">#gnome色彩管理器</span></div><div class="line">gnome-nettool           <span class="comment">#gnome网络工具</span></div><div class="line">file-roller             <span class="comment">#gnome归档管理器</span></div><div class="line">seahorse                <span class="comment">#保存程序的PGP密钥</span></div><div class="line">vinagre	                <span class="comment">#gnome 桌面的远程控制服务</span></div></pre></td></tr></table></figure></p>
 <p><img src="http://okqqc0v2n.bkt.clouddn.com/17-5-28/35268505.jpg" alt=""><br>更改以下设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano ~/.xinitrc</div></pre></td></tr></table></figure></p>
@@ -308,6 +308,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/06/23/shadowsocks教程-md/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          科学上网教程
+        
+      </div>
+    </a>
   
   
     <a href="/2017/02/27/raspberrypi装系统/" id="article-nav-older" class="article-nav-link-wrap">
@@ -433,11 +442,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -457,11 +462,31 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
+                <a href="javascript:void(0)" class="js-tag color2">shadowsocks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hosts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -474,10 +499,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">图床</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
               </li>
             
             <div class="clearfix"></div>
