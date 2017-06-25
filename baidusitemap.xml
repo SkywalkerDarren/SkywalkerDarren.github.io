@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://SkywalkerDarren.com/2017/02/02/hello-world/</loc>
+    <lastmod>2017-06-25T06:40:12.629Z</lastmod>
+    <data>
+        <display>
+        <title>Hello world</title>
+        <pubTime>2017-02-02T04:15:09.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://SkywalkerDarren.com/2017/05/28/Arch-+-VMware-+-UEFI-+-%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2017-06-24T07:49:10.799Z</lastmod>
     <data>
@@ -142,19 +157,4 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://SkywalkerDarren.com/2017/02/02/hello-world/</loc>
-    <lastmod>2017-02-02T05:28:43.755Z</lastmod>
-    <data>
-        <display>
-        <title>Hello world</title>
-        <pubTime>2017-02-02T04:15:09.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
