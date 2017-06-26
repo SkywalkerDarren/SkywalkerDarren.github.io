@@ -15,13 +15,7 @@
 <meta property="og:site_name" content="SkywalkerDarren">
 <meta property="og:description" content="网络监管变得严格，媒体都要姓党，虽然对于一般人来说没什么影响，但是对于像我这种严重依赖Google，FaceBook等外网的人来说，影响还是很大的。后来政策再一次收紧，GFW变厚，又以“封锁违规VPN”的名义开始了大肆封锁VPN。最终到了17年6月份，著名的GREEN加速器也终于还是顶不住了压力，宣布了关闭服务的公告。作为续费了好几年的老用户来说这又是一个沉重的打击，这也是我要写这篇教程的原因。这">
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-23/55361165.jpg">
-<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-25/37850408.jpg">
-<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-25/72444031.jpg">
-<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-25/9128205.jpg">
-<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-25/10865922.jpg">
-<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-25/22606712.jpg">
-<meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-23/25103642.jpg">
-<meta property="og:updated_time" content="2017-06-25T17:58:48.556Z">
+<meta property="og:updated_time" content="2017-06-26T04:36:14.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科学上网教程">
 <meta name="twitter:description" content="网络监管变得严格，媒体都要姓党，虽然对于一般人来说没什么影响，但是对于像我这种严重依赖Google，FaceBook等外网的人来说，影响还是很大的。后来政策再一次收紧，GFW变厚，又以“封锁违规VPN”的名义开始了大肆封锁VPN。最终到了17年6月份，著名的GREEN加速器也终于还是顶不住了压力，宣布了关闭服务的公告。作为续费了好几年的老用户来说这又是一个沉重的打击，这也是我要写这篇教程的原因。这">
@@ -220,23 +214,39 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <p>因为这样做十分的麻烦，每次开机都要操作一次，所以我写了一个脚本方便大家使用。以后只要每次开机运行一下脚本，就可以自动更新hosts，一键化操作。</p>
-<h2 id="自动脚本方法"><a href="#自动脚本方法" class="headerlink" title="自动脚本方法"></a>自动脚本方法</h2><p>首先需要安装<code>wget</code>，这里给出各个系统的安装方式。</p>
-<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>从<a href="https://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=iweb" target="_blank" rel="external">这里下载</a>并安装，连安装目录都不用改，全程一直点“下一步”就可以了。</p>
-<p>右键<code>此电脑 -&gt; 属性</code>。</p>
-<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-25/37850408.jpg" alt=""></p>
-<p>点击<code>高级系统设置</code>，点到<code>高级</code>选项卡，点<code>环境变量</code>，点<code>新建</code>。</p>
-<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-25/72444031.jpg" alt=""></p>
-<p>设置环境变量<code>GNU_HOME=你的wget安装目录</code>，然后确定。</p>
-<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-25/9128205.jpg" alt=""></p>
-<p>然后这里再<strong>编辑</strong><code>Path</code>环境变量，加入<code>%GNU_HOME%\bin</code>。这里有两种情况。这里编辑用户变量或是系统变量都是可以的。</p>
-<p>第一种编辑是这样的界面，像图中这样操作就可以了。</p>
-<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-25/10865922.jpg" alt=""></p>
-<p>第二种是这样的界面，将这段文字复制到最后面<code>;%GNU_HOME%\bin;</code><strong>注意这里包括分号，英文的分号</strong></p>
-<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-25/22606712.jpg" alt=""></p>
-<p>然后任意地方（比如桌面）新建一个记事本<code>updateHosts.txt</code>，将下面这段代码复制进去。</p>
+<h2 id="自动脚本方法"><a href="#自动脚本方法" class="headerlink" title="自动脚本方法"></a>自动脚本方法</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><!--从[这里下载](https://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=iweb)并安装，连安装目录都不用改，全程一直点“下一步”就可以了。
+
+右键`此电脑 -> 属性`。
+
+![](http://okqqc0v2n.bkt.clouddn.com/17-6-25/37850408.jpg)
+
+点击`高级系统设置`，点到`高级`选项卡，点`环境变量`，点`新建`。
+
+![](http://okqqc0v2n.bkt.clouddn.com/17-6-25/72444031.jpg)
+
+设置环境变量`GNU_HOME=你的wget安装目录`，然后确定。
+
+![](http://okqqc0v2n.bkt.clouddn.com/17-6-25/9128205.jpg)
+
+然后这里再**编辑**`Path`环境变量，加入`%GNU_HOME%\bin`。这里有两种情况。这里编辑用户变量或是系统变量都是可以的。
+
+第一种编辑是这样的界面，像图中这样操作就可以了。
+
+![](http://okqqc0v2n.bkt.clouddn.com/17-6-25/10865922.jpg)
+
+第二种是这样的界面，将这段文字复制到最后面`;%GNU_HOME%\bin;`**注意这里包括分号，英文的分号**
+
+![](http://okqqc0v2n.bkt.clouddn.com/17-6-25/22606712.jpg)
+
+然后任意地方（比如桌面）新建一个记事本`updateHosts.txt`，将下面这段代码复制进去。
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line">&gt;nul 2&gt;&amp;1 <span class="string">"%SYSTEMROOT%\system32\cacls.exe"</span> <span class="string">"%SYSTEMROOT%\system32\config\system"</span></div><div class="line"><span class="keyword">if</span> <span class="string">'%errorlevel%'</span> NEQ <span class="string">'0'</span> (</div><div class="line">    goto UACPrompt</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    goto gotAdmin</div><div class="line">)</div><div class="line"></div><div class="line">:UACPrompt</div><div class="line"><span class="built_in">echo</span> Set UAC = CreateObject^(<span class="string">"Shell.Application"</span>^) &gt; <span class="string">"%temp%\getadmin.vbs"</span></div><div class="line"><span class="built_in">echo</span> UAC.ShellExecute <span class="string">"%~s0"</span>, <span class="string">""</span>, <span class="string">""</span>, <span class="string">"runas"</span>, 1 &gt;&gt; <span class="string">"%temp%\getadmin.vbs"</span></div><div class="line"><span class="string">"%temp%\getadmin.vbs"</span></div><div class="line"><span class="built_in">exit</span> /B</div><div class="line"></div><div class="line">:gotAdmin</div><div class="line"><span class="keyword">if</span> exist <span class="string">"%temp%\getadmin.vbs"</span> (</div><div class="line">    del <span class="string">"%temp%\getadmin.vbs"</span></div><div class="line">)</div><div class="line"><span class="built_in">pushd</span> <span class="string">"%CD%"</span></div><div class="line">CD /D <span class="string">"%~dp0"</span></div><div class="line"></div><div class="line">wget --no-check-certificate https://raw.githubusercontent.com/racaljk/hosts/master/hosts -O C:\Windows\System32\drivers\etc\hosts</div></pre></td></tr></table></figure>
 <p>保存，关闭，把后缀<code>.txt</code>重命名为<code>.bat</code>，最后像这样<code>updateHosts.bat</code>。</p>
-<p>完成。以后只要双击一下这个文件，出现管理员权限运行点“是”就可以了。</p>
+<p>完成。以后只要双击一下这个文件，出现管理员权限运行点“是”就可以了。–&gt;</p>
+<p>这里我用python写了一个自动更新Hosts的小程序<a href="https://github.com/SkywalkerDarren/AutoHosts/raw/master/dist/updatehosts.exe">点这里</a>下载，右键，以<code>管理员身份运行</code>，然后点<code>是</code>即可。</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-26/54316180.jpg" alt=""></p>
+<p>点<code>开始更新</code>，出现<code>更新成功</code>就完成了。</p>
+<p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-26/92342968.jpg" alt=""></p>
 <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>Debian系的如Ubuntu，Mint的执行</p>
 <p><code>sudo apt-get install wget</code></p>
 <p>RedHat系如Fedoras，CentOS的执行</p>
@@ -250,13 +260,13 @@ var _hmt = _hmt || [];
 <p><code>sudo chmod 777 hosts.sh</code></p>
 <p>这样以后开机只要执行<code>./hosts.sh</code>就自动完成了hosts的更新。</p>
 <h3 id="OSX"><a href="#OSX" class="headerlink" title="OSX"></a>OSX</h3><h1 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h1><p>shadowsocks是一种基于Socks5代理方式的网络数据加密传输包。原作者Clowwindy称受到了中国政府的压力，宣布停止维护此计划（项目）并移除其个人页面所存储的源代码。因为移除之前就有大量的复制副本，所以事实上并未停止维护，而是转由其他贡献者们持续维护中。</p>
-<p>各个版本的<a href="https://shadowsocks.org/en/download/clients.html" target="_blank" rel="external">客户端地址</a>，这里仅演示Windows和Ubuntu的使用教程。</p>
-<h2 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h2><p>首先，从这里下载<a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="external">windows客户端</a>，解压得到客户端，点击打开可以看到这样的画面</p>
+<p>各个版本的<a href="https://shadowsocks.org/en/download/clients.html">客户端地址</a>，这里仅演示Windows和Ubuntu的使用教程。</p>
+<h2 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h2><p>首先，从这里下载<a href="https://github.com/shadowsocks/shadowsocks-windows/releases">windows客户端</a>，解压得到客户端，点击打开可以看到这样的画面</p>
 <p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-23/25103642.jpg" alt=""></p>
 <p>然后分别填入<strong>服务器地址</strong>、<strong>服务器端口</strong>、<strong>密码</strong>、<strong>加密方式</strong>，这四个重要信息就可以正常科学上网了。</p>
-<p>至于账号密码的获得，网上有大量的免费的或收费的账号可供你选择，<a href="https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7" target="_blank" rel="external">这里</a>也有大量的免费账号。</p>
+<p>至于账号密码的获得，网上有大量的免费的或收费的账号可供你选择，<a href="https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7">这里</a>也有大量的免费账号。</p>
 <h2 id="Linux-1"><a href="#Linux-1" class="headerlink" title="Linux"></a>Linux</h2><p>等我有空继续更新 ，嗯：）</p>
-
+-->
       
 
       
