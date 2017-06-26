@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-26/54316180.jpg">
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-26/92342968.jpg">
 <meta property="og:image" content="http://okqqc0v2n.bkt.clouddn.com/17-6-23/25103642.jpg">
-<meta property="og:updated_time" content="2017-06-26T04:42:25.543Z">
+<meta property="og:updated_time" content="2017-06-26T04:45:58.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科学上网教程">
 <meta name="twitter:description" content="网络监管变得严格，媒体都要姓党，虽然对于一般人来说没什么影响，但是对于像我这种严重依赖Google，FaceBook等外网的人来说，影响还是很大的。后来政策再一次收紧，GFW变厚，又以“封锁违规VPN”的名义开始了大肆封锁VPN。最终到了17年6月份，著名的GREEN加速器也终于还是顶不住了压力，宣布了关闭服务的公告。作为续费了好几年的老用户来说这又是一个沉重的打击，这也是我要写这篇教程的原因。这">
@@ -223,16 +223,16 @@ var _hmt = _hmt || [];
 <p><img src="http://okqqc0v2n.bkt.clouddn.com/17-6-26/92342968.jpg" alt=""></p>
 <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>首先需要安装<code>wget</code>，这里给出各个系统的安装方式。</p>
 <p>Debian系的如Ubuntu，Mint的执行</p>
-<p><code>sudo apt-get install wget</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install wget</div></pre></td></tr></table></figure>
 <p>RedHat系如Fedoras，CentOS的执行</p>
-<p><code>sudo yum install wget</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install wget</div></pre></td></tr></table></figure>
 <p>Arch执行</p>
-<p><code>sudo pacman -S wget</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pacman -S wget</div></pre></td></tr></table></figure>
 <p>新建脚本<code>hosts.sh</code></p>
-<p><code>nano hosts.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nano hosts.sh</div></pre></td></tr></table></figure>
 <p>然后将下面代码复制到</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo wget --no-check-certificate https://raw.githubusercontent.com/racaljk/hosts/master/hosts -O /etc/hosts</div></pre></td></tr></table></figure>
-<p><code>sudo chmod 777 hosts.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chmod 777 hosts.sh</div></pre></td></tr></table></figure>
 <p>这样以后开机只要执行<code>./hosts.sh</code>就自动完成了hosts的更新。</p>
 <h3 id="OSX"><a href="#OSX" class="headerlink" title="OSX"></a>OSX</h3><h1 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h1><p>shadowsocks是一种基于Socks5代理方式的网络数据加密传输包。原作者Clowwindy称受到了中国政府的压力，宣布停止维护此计划（项目）并移除其个人页面所存储的源代码。因为移除之前就有大量的复制副本，所以事实上并未停止维护，而是转由其他贡献者们持续维护中。</p>
 <p>各个版本的<a href="https://shadowsocks.org/en/download/clients.html" target="_blank" rel="external">客户端地址</a>，这里仅演示Windows和Ubuntu的使用教程。</p>
